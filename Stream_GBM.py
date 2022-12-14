@@ -10,11 +10,6 @@ def ui_analysis():
     st.title('LightGBM Classification For Prediction Of Soil-Types')
     st.info('Last Update : 2022/12/07')
     
-    #Sidebar
-    st.sidebar.markdown('[Document : Streamlit](https://docs.streamlit.io/)')
-    st.sidebar.caption('References : https://qiita.com/tamura__246/items/366b5581c03dd74f4508\
-                        https://zenn.dev/ohtaman/articles/streamlit_tips')
-
 
 #display GIF on home
 def display_GIF():
