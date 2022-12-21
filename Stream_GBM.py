@@ -6,7 +6,7 @@ import streamlit.components.v1 as stc
 #base UI config, reload -> apply other pages
 def ui_analysis():        
     #Header
-    st.image('./img_sample/plants_icon.png',width=600)
+    st.image('./img_sample/plants_icon.png',width=500)
     st.title('LightGBM Classification For Prediction Of Soil-Types')
     st.info('Last Update : 2022/12/07')
     
@@ -19,7 +19,7 @@ def display_GIF():
     file_.close()
 
     st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif"  width="600">',
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif"  width="700">',
         unsafe_allow_html=True,
         )
 
