@@ -1,5 +1,6 @@
 <img src="./img_sample/plants_icon.png" width="400px"><br>
 # Stream GBM
+![Streamlit version](https://img.shields.io/badge/Streamlit-v1.14.1-orange)
 
 - ###  About Stream GBM
 Stream GBM is a soil type classification tool. 
