@@ -26,18 +26,15 @@ def config_dataset(csv_dataset):
     st.subheader('2. Config Model Dataset')
 
     #multi select box -> categorical_features/explanatory_variable
-    categorical_features = st.multiselect('Categorical Features',\
-        csv_dataset.columns.values)
+    categorical_features = st.multiselect('Categorical Features', csv_dataset.columns.values)
     st.write(categorical_features)
     print(categorical_features)
 
-    explanatory_variable = st.multiselect('Selected Features',\
-        csv_dataset.columns.values)
+    explanatory_variable = st.multiselect('Selected Features', csv_dataset.columns.values)
     st.write(explanatory_variable)
 
     #single selectbox -> objective_variable
-    objective_variable = st.selectbox('Selected Objective variable',\
-        csv_dataset.columns.values)
+    objective_variable = st.selectbox('Selected Objective variable', csv_dataset.columns.values)
     st.write(objective_variable)
     
     return categorical_features,explanatory_variable,objective_variable
@@ -97,7 +94,8 @@ def result(clf,y_valid,predicted):
     """
     
     create_figure.conf_mat(y_valid,predicted)
-    create_figure.met_imp(clf)
+    create_figure.metric(clf)
+    create_figure.feature_importances(clf)
     
     
 
