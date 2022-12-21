@@ -17,9 +17,9 @@ Click button, automatically start model training(Light GBM).
 3. Click `Start Analysis` button<br>
 4. Show Results
 
-    -Classification accuracy<br>
-    -Confusion matrix<br>
-    -Feature importances<br>
+    - Classification accuracy<br>
+    - Confusion matrix<br>
+    - Feature importances<br>
 
 <img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="750">
 
