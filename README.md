@@ -1,7 +1,7 @@
 <img src="./img_sample/plants_icon.png" width="400px"><br>
 # Stream GBM
 ![Streamlit version](https://img.shields.io/badge/Streamlit-v1.14.1-orange)
-![Update](https://img.shields.io/badge/Update-2022/12/21-gblue)
+![Update](https://img.shields.io/badge/Update-2022/12/21-blue)
 ![License](https://img.shields.io/badge/License-naro-green)
 
 - ##  About Stream GBM
