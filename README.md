@@ -13,9 +13,9 @@ Please input soil data csv file and select some dataset select config.
 Click button, automatically start model training(Light GBM).
 
 1. Input soil dataset (__only csv__), drop and drug to file uploader.<br>
-2. Select explanatory and objective variables<br>
-3. Click `Start Analysis` button<br>
-4. Show Results
+2. Select explanatory and objective variables.<br>
+3. Click `Start Analysis` button.<br>
+4. Show Results.<br>
 
     - Classification accuracy<br>
     - Confusion matrix<br>
@@ -25,9 +25,9 @@ Click button, automatically start model training(Light GBM).
 
 ### Visualization
 Also, you can check your dataset on this page.
-please upload your dataset file again, and check descriptive statistics.
+please upload your dataset file again, and check descriptive statistics.<br>
 
 1. Upload Soil dataset file.
-2. Check Results and Click `Press to Download`, output descriptive statistics.
+2. Check Results and Click `Press to Download`, output descriptive statistics.<br>
 
 <img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_visualization.gif" width="750">
