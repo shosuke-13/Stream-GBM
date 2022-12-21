@@ -20,4 +20,4 @@ You can check these results.<br>
 2. Confusion matrix<br>
 3. Feature importances<br>
 
-click `Press to Download`, output predicted Soil types csv file.
+Click `Press to Download`, output predicted Soil types csv file.
