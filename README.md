@@ -1,6 +1,6 @@
 # Stream GBM
-<img src="./img_sample/plants_icon.png" width="400px">
-<br>
+<img src="./img_sample/plants_icon.png" width="400px"><br>
+
 ***
 - ###  About Stream GBM
 Stream GBM is a soil type classification tool. 
