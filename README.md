@@ -21,7 +21,7 @@ Click button, automatically start model training(Light GBM).
     - Confusion matrix<br>
     - Feature importances<br>
 
-<img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="750"><br>
+<img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="750">
 
 ### Visualization
 Also, you can check your dataset on this page.
@@ -30,4 +30,4 @@ please upload your dataset file again, and check descriptive statistics.<br>
 1. Upload Soil dataset file.<br>
 2. Check Results and Click `Press to Download`, output descriptive statistics.<br>
 
-<img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_visualization.gif" width="750"><br>
+<img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_visualization.gif" width="750">
