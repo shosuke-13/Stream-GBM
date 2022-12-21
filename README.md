@@ -9,7 +9,7 @@ This tool uses Light GBM model, and output classification accuracy and confusion
 - ###  Analysis Flow<br>
 
 #### Page : Analysis
-1. Input soil dataset(__only csv__),drop and drug to file uploader.<br>
+1. Input soil dataset (__only csv__), drop and drug to file uploader.<br>
 2. Select explanatory and objective variables<br>
 3. Click `Start Analysis` button<br>
 
