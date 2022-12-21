@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
+from sklearn.metrics import accuracy_score
+
 from modules import model
 from Stream_GBM import ui_analysis
-
 from modules import create_figure
+
+
 #upload csv file
 def upload():
     #analysis section 1
@@ -59,8 +62,8 @@ def model_parameter():
 #start model training or not
 def check_button():
     st.markdown('---')
-    st.subheader('4. Model Analysis')
     st.warning('Please fill the config model dataset form')
+    st.subheader('4. Model Analysis')
     checked = st.button('Start analysis')
     
     return checked
@@ -86,17 +89,16 @@ def model_conduct(checked,upload_csv,categorical_features,\
 def result(clf,y_valid,predicted):
     """
     Results
-    - datavisualization
     - Accuracy
-    - TP / TN / FP / FN
     - Confusion matrix
-    - feature imoprtance
+    - Training process
+    - Feature imoprtance
     """
+    st.markdown(f'### Accuracy : {accuracy_score(y_valid,predicted)}')
     
     create_figure.conf_mat(y_valid,predicted)
     create_figure.metric(clf)
     create_figure.feature_importances(clf)
-    
     
 
 def main():
