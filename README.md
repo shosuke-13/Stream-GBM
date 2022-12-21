@@ -2,11 +2,11 @@
 ![leaf](./img_sample/plants_icon.png)
 <br>
 ***
--###  About Stream GBM
+- ###  About Stream GBM
 Stream GBM is a soil type classification tool. 
 This tool uses Light GBM model, and output classification accuracy and confusion matrix.<br>
 
-###  Analysis Flow<br>
+- ###  Analysis Flow<br>
 
 #### Page : Analysis
 1. Input soil dataset(__only csv__),drop and drug to file uploader.<br>
