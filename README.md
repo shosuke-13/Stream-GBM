@@ -1,7 +1,5 @@
 <img src="./img_sample/plants_icon.png" width="400px"><br>
 # Stream GBM
-![SPM is supported](https://img.shields.io/badge/eclipse-marketplace/last-update
-)
 
 - ###  About Stream GBM
 Stream GBM is a soil type classification tool. 
