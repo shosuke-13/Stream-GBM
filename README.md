@@ -1,5 +1,6 @@
 # Stream GBM
 ![leaf](./img_sample/plants_icon.png)
+<img src="./img_sample/plants_icon.png" width="200px">
 <br>
 ***
 - ###  About Stream GBM
