@@ -25,7 +25,7 @@ def display_GIF():
 
 def md_explain():
     st.markdown('---')
-    st.markdown('This application can analysis soil table-data.')
+    st.markdown('[Stream GBM : README](https://github.com/shosuke-13/Stream-GBM)')
         
     
 def main():
