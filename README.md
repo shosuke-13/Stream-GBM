@@ -8,20 +8,26 @@ This tool uses Light GBM model, and output classification accuracy and confusion
 
 - ###  Analysis Flow<br>
 
-#### Page : Analysis
+#### Analysis
+Please input soil data csv file and select some dataset select config.
+Click button, automatically start model training(Light GBM).
+
 1. Input soil dataset (__only csv__), drop and drug to file uploader.<br>
 2. Select explanatory and objective variables<br>
 3. Click `Start Analysis` button<br>
+4. Show Results
+
+    Classification accuracy<br>
+    Confusion matrix<br>
+    Feature importances<br>
 
 <img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="750">
 
-#### Page : Results
-You can check these results.<br>
+#### Visualization
+Also, you can check your dataset on this page.
+please upload your dataset file again, and check descriptive statistics.
 
-1. Classification accuracy<br>
-2. Confusion matrix<br>
-3. Feature importances<br>
-
-Click `Press to Download`, output predicted Soil types csv file.
+1. Upload Soil dataset file.
+2. Check Results and Click `Press to Download`, output descriptive statistics.
 
 <img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_visualization.gif" width="750">
