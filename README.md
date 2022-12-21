@@ -13,6 +13,8 @@ This tool uses Light GBM model, and output classification accuracy and confusion
 2. Select explanatory and objective variables<br>
 3. Click `Start Analysis` button<br>
 
+![demo analysis](https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif)
+
 #### Page : Results
 You can check these results.<br>
 
@@ -21,3 +23,5 @@ You can check these results.<br>
 3. Feature importances<br>
 
 Click `Press to Download`, output predicted Soil types csv file.
+
+![demo visualization](https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_visualization.gif)
