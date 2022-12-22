@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix
 
 #plot confusino matrix
 def conf_mat(y_valid,predicted):
-    plt.figure(figsize=(10, 10))
+    plt.figure(figsize=(5, 5))
     cm_LR = confusion_matrix(y_valid,predicted)
     sns.heatmap(cm_LR, square=True, cbar=True, annot=True, cmap='Greens')
     
@@ -21,7 +21,7 @@ def conf_mat(y_valid,predicted):
     
 # plot training process
 def metric(clf):
-    lgb.plot_metric(clf,figsize=(10, 8))
+    lgb.plot_metric(clf,figsize=(5, 5))
     
     st.markdown('- #### Metric during training')
     st.pyplot(plt)
@@ -29,7 +29,7 @@ def metric(clf):
 
 # plot feature importances
 def feature_importances(clf):
-    lgb.plot_importance(clf,figsize=(10, 8))
+    lgb.plot_importance(clf,figsize=(5, 5))
     
     st.markdown('- #### Feature imoprtances')
     st.pyplot(plt)

@@ -4,22 +4,7 @@ from sklearn.metrics import accuracy_score
 
 from modules import model
 from Stream_GBM import ui_analysis
-from modules import create_figure
-
-
-#upload csv file
-def upload():
-    #analysis section 1
-    st.markdown('---')
-    st.subheader('1. Upload Model Dataset(csv)')
-    
-    upload_csv = st.file_uploader('',type='csv')
-    if upload_csv is not None:
-        # Can be used wherever a "file-like" object is accepted:
-        upload_csv = pd.read_csv(upload_csv)
-        st.write(upload_csv)
-    
-    return upload_csv
+from modules import create_figure,file_uploader
 
 
 #select features,categorical,objective
@@ -31,7 +16,6 @@ def config_dataset(csv_dataset):
     #multi select box -> categorical_features/explanatory_variable
     categorical_features = st.multiselect('Categorical Features', csv_dataset.columns.values)
     st.write(categorical_features)
-    print(categorical_features)
 
     explanatory_variable = st.multiselect('Selected Features', csv_dataset.columns.values)
     st.write(explanatory_variable)
@@ -59,17 +43,19 @@ def model_parameter():
                 } """)
     
 
-#start model training or not
+# start model training or not
 def check_button():
     st.markdown('---')
     st.warning('Please fill the config model dataset form')
     st.subheader('4. Model Analysis')
+    
+    # click button -> start model training and predict
     checked = st.button('Start analysis')
     
     return checked
 
 
-#conduct model function
+# conduct model function
 def model_conduct(checked,upload_csv,categorical_features,\
                                 explanatory_variable,objective_variable):
     if bool(checked) == True:
@@ -96,21 +82,18 @@ def result(clf,y_valid,predicted):
     """
     st.markdown(f'### Accuracy : {accuracy_score(y_valid,predicted)}')
     
-    create_figure.conf_mat(y_valid,predicted)
-    create_figure.metric(clf)
-    create_figure.feature_importances(clf)
+    result_conf, result_metric, result_fimp = st.tabs(['Confusion Matrix', 'Metrics', 'Feature Importances'])
+    with result_conf:
+        create_figure.conf_mat(y_valid,predicted)
+    with result_metric:
+        create_figure.metric(clf)
+    with result_fimp:
+        create_figure.feature_importances(clf)
+ 
+ 
+def analysis_predict(upload_csv,all_points):
     
-
-def main():
-    #Base UI
-    ui_analysis()
-    
-    #csv file uploader
-    upload_csv = upload()
-
-    #input dataset to config_dataset method()
-    #Development -> df_toyota
-    #Deploy -> upload_csv
+    # input dataset to config_dataset method()
     if upload_csv is not None:
         categorical_features,explanatory_variable,\
             objective_variable = config_dataset(upload_csv)
@@ -119,15 +102,43 @@ def main():
         model_parameter()
         checked = check_button()
         
-        if bool(checked) == True:
-            #model trainnig and vaildation
-            clf,y_valid,predicted = model_conduct(checked,upload_csv,categorical_features,\
+        # keep widget
+        st.session_state['train'] = bool(checked)
+        
+        # if check button clicked, start model training and classification
+        if st.session_state['train'] == True:
+            
+            # model trainnig and vaildation
+            clf, y_valid, predicted = model_conduct(checked,upload_csv,categorical_features,\
                 explanatory_variable,objective_variable)
             
+            # plot results
             result(clf,y_valid,predicted)
-
-
+            
+            # drop NaN cells (reduce dataset size), select explanatory variables
+            allPoints_dropped = all_points.dropna()\
+                                    .loc[:,explanatory_variable]
+            
+            # predict allpoint data and view dataframe(dataset and results)    
+            predicted_allPoints = pd.DataFrame(clf.predict(allPoints_dropped))
+            
+            col_all, col_classified = st.tabs(['All points dataset (dropped)', 'Classified'])
+            
+            with col_all:
+                st.write(allPoints_dropped.head(5))   
+            
+            with col_classified: 
+                st.write(predicted_allPoints.head(5))
+            
+            # download classification results
+            st.download_button( "Press to Download",
+                                predicted_allPoints.to_csv(),
+                                "dataset_statics.csv",
+                                "text/csv",
+                                 key='download-csv' )
+            
     else:
+        # before upload dataset file, show this
         st.markdown('---')
         st.subheader('2. Config Model Dataset')
         st.caption('Please upload dataset csv file')
@@ -139,6 +150,22 @@ def main():
         st.markdown('---')
         st.subheader('4. Model Analysis')
         st.caption('Please upload dataset csv file')
+            
+
+def main():
+    # Base UI
+    ui_analysis()
+    st.subheader('1. Upload Model Dataset (csv)')
+    
+    # csv file uploader
+    upload, upload_all = st.tabs(['Model Training Dataset', 'All Points Dataset'])
+    with upload:
+        upload_csv = file_uploader.upload()
+    with upload_all:
+        all_points = file_uploader.upload_all()
+
+    # analysis section
+    analysis_predict(upload_csv,all_points)
 
 
 if __name__ == '__main__':
