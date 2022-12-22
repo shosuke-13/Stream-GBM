@@ -22,7 +22,7 @@ Click button, automatically start model training(Light GBM).
    Please upload both dataset files.
 2. Select category,explanatory and objective variables.
 
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/05e1031d82630108b7c1adbff791cfa46cc11449/demo/demo_input.gif" width="650">
+<img src="https://github.com/shosuke-13/Stream-GBM/blob/05e1031d82630108b7c1adbff791cfa46cc11449/demo/demo_input.gif" width="650">
 
 3. Click `Start Analysis` button.
 4. Show Results.
