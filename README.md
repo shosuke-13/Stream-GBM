@@ -26,7 +26,7 @@ Click button, automatically start model training(Light GBM).
       Three tabs. <br>
     - Classification accuracy
     - Confusion matrix
-    - Feature importances
+    - Feature importances　　
 
 <img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="600">
 
