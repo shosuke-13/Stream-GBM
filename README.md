@@ -11,7 +11,7 @@ This tool uses Light GBM model, and output classification accuracy and confusion
 - ## Target Dataset
 The purpose of this analysis tools is classification of soil types.Please input 2 soil csv dataset (model training dataset and classification dataset). Model training dataset needs explanatory variables and a objective variable. Classification dataset needs only explanatory variable. You can input category variables in these dataset, but please select category variables.<br>
 
-!Note : Before classification soil types, drop None cells in classification dataset.
+*!Note* : Before classification soil types, drop None cells in classification dataset.
 
 - ##  Analysis Flow<br>
 ### Analysis
@@ -19,14 +19,14 @@ Please input soil data csv file and select some dataset configuration.
 Click button, automatically start model training(Light GBM).
 
 1. Input soil dataset (__only csv__), drop and drug to file uploader. 2 tabs exist, model training dataset and classification dataset.
-   Please upload both dataset files.<br>
-2. Select category,explanatory and objective variables.<br>
-3. Click `Start Analysis` button.<br>
-4. Show Results.<br>
-      3 tabs.<br>
-    - Classification accuracy<br>
-    - Confusion matrix<br>
-    - Feature importances<br>
+   Please upload both dataset files.
+2. Select category,explanatory and objective variables.
+3. Click `Start Analysis` button.
+4. Show Results.
+      Three tabs. <br>
+    - Classification accuracy
+    - Confusion matrix
+    - Feature importances
 
 <img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="600">
 
