@@ -21,6 +21,9 @@ Click button, automatically start model training(Light GBM).
 1. Input soil dataset (__only csv__), drop and drug to file uploader. 2 tabs exist, model training dataset and classification dataset.
    Please upload both dataset files.
 2. Select category,explanatory and objective variables.
+
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/05e1031d82630108b7c1adbff791cfa46cc11449/demo/demo_input.gif" width="650">
+
 3. Click `Start Analysis` button.
 4. Show Results.
       Three tabs. <br>
@@ -28,7 +31,7 @@ Click button, automatically start model training(Light GBM).
     - Confusion matrix
     - Feature importances　　
 
-<img src="https://github.com/shosuke-13/Stream-GBM/blob/a34b57e5ad72a0f02343762b3b4713cb82af1016/demo/demo_analysis.gif" width="600">
+<img src="https://github.com/shosuke-13/Stream-GBM/blob/05e1031d82630108b7c1adbff791cfa46cc11449/demo/demo_model.gif" width="650">
 
 ### Visualization
 Also, you can check your dataset on this page.
