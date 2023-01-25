@@ -7,6 +7,11 @@ from Stream_GBM import ui_analysis
 from modules import create_figure,file_uploader
 
 
+def upload():
+    dataset = st.file_uploader('choose a csv file',label_visibility='hidden')
+    
+    return dataset
+
 #select features,categorical,objective
 def config_dataset(csv_dataset):
     #analysis section 2

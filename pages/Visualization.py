@@ -1,9 +1,16 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 from Stream_GBM import ui_analysis
 from pages import Analysis
+
+def upload():
+    dataset = st.file_uploader('choose a csv file',label_visibility='hidden')
+    
+    return dataset
 
 def make_hist(dataset,dataset_column):
 
@@ -31,7 +38,7 @@ def select_column(dataset):
 
 def main():
     ui_analysis()
-    dataset = Analysis.upload()
+    dataset = pd.read_csv(upload())
     
     # check csv file uploaded
     if dataset is not None:
@@ -53,6 +60,11 @@ def main():
         dataset_column = select_column(dataset)
         
         make_hist(dataset,dataset_column)
+        
+        corr = dataset.corr()
+        plt.figure(figsize=(12,12))
+        sns.heatmap(corr,square = True,vmax=1,vmin=-1,center=0,cmap='cool')
+        st.pyplot()
         
 
 if __name__ == '__main__':
