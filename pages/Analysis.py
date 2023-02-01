@@ -131,9 +131,11 @@ def analysis_predict(upload_csv,all_points):
             
             with col_all:
                 st.write(allPoints_dropped.head(5))   
+                st.write(allPoints_dropped.describe())
             
             with col_classified: 
                 st.write(predicted_allPoints.head(5))
+                st.write(predicted_allPoints.rename(columns={0:'Group Predictions'}).describe())
             
             # download classification results
             st.download_button( "Press to Download",
@@ -165,9 +167,9 @@ def main():
     # csv file uploader
     upload, upload_all = st.tabs(['Model Training Dataset', 'All Points Dataset'])
     with upload:
-        upload_csv = file_uploader.upload()
+        upload_csv = pd.DataFrame(file_uploader.upload())
     with upload_all:
-        all_points = file_uploader.upload_all()
+        all_points = pd.DataFrame(file_uploader.upload_all())
 
     # analysis section
     analysis_predict(upload_csv,all_points)

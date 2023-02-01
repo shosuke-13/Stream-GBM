@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from Stream_GBM import ui_analysis
+from modules import file_uploader
 from pages import Analysis
 
 def upload():
@@ -38,10 +39,11 @@ def select_column(dataset):
 
 def main():
     ui_analysis()
-    dataset = pd.read_csv(upload())
-    
+    input = file_uploader.upload()
+    #dataset = pd.read_csv(input)
     # check csv file uploaded
-    if dataset is not None:
+    if input is not None :
+        dataset = pd.DataFrame(input)
         st.markdown('### Descriptive Statistics')
         
         # make descriptive statistics table
