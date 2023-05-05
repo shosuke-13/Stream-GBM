@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from sklearn.metrics import accuracy_score
-
 from modules import model
 from Stream_GBM import ui_analysis
 from modules import create_figure,file_uploader

@@ -6,13 +6,13 @@ import streamlit.components.v1 as stc
 #base UI config, reload -> apply other pages
 def ui_analysis():        
     #Header
-    st.image('./img_sample/plants_icon.png',width=500)
+    st.image('./icon/plants_icon.png',width=500)
     st.title('LightGBM Classification For Prediction Of Soil-Types')
     
 
 #display GIF on home
 def display_GIF():
-    file_ = open("./img_sample/Force.gif", "rb")
+    file_ = open("./icon/Force.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
