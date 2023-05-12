@@ -1,4 +1,4 @@
-<img src="./img_sample/plants_icon.png" width="400px"><br>
+<img src="https://github.com/shosuke-13/Stream-GBM/blob/main/icon/plants_icon.png" width="400px"><br>
 # Stream GBM
 ![Streamlit version](https://img.shields.io/badge/Streamlit-v1.14.1-orange)
 ![Update](https://img.shields.io/badge/Update-2022/12/22-blue)
