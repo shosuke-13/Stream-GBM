@@ -7,7 +7,7 @@
 
 ##  About Stream GBM & Target Dataset
 Stream GBM is a soil type classification tool. 
-This tool uses Light GBM model, and output classification accuracy and confusion matrix.<br>
+This tool uses Light GBM model, and output classification accuracy and confusion matrix.
 The purpose of this analysis tools is classification of soil types.Please input 2 soil csv dataset (model training dataset and classification dataset). Model training dataset needs explanatory variables and a objective variable. Classification dataset needs only explanatory variable. You can input category variables in these dataset, but please select category variables.<br>
 
 ##  Analysis Flow<br>
