@@ -15,7 +15,6 @@ def conf_mat(y_valid,predicted):
     plt.xlabel("Predicted", fontsize=15)
     plt.ylabel("True Label", fontsize=15)
     
-    st.markdown('- #### Confusion matrix')
     st.pyplot(plt)
     
     
@@ -23,7 +22,6 @@ def conf_mat(y_valid,predicted):
 def metric(clf):
     lgb.plot_metric(clf,figsize=(5, 5))
     
-    st.markdown('- #### Metric during training')
     st.pyplot(plt)
     
 
@@ -31,5 +29,4 @@ def metric(clf):
 def feature_importances(clf):
     lgb.plot_importance(clf,figsize=(5, 5))
     
-    st.markdown('- #### Feature imoprtances')
     st.pyplot(plt)

@@ -1,17 +1,10 @@
-import streamlit as st
 import pandas as pd
-import numpy as np
+import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-from Stream_GBM import ui_analysis
+from main import ui_analysis
 from modules import file_uploader
-from pages import Analysis
 
-def upload():
-    dataset = st.file_uploader('choose a csv file',label_visibility='hidden')
-    
-    return dataset
 
 def make_hist(dataset,dataset_column):
 
@@ -44,30 +37,40 @@ def main():
     # check csv file uploaded
     if input is not None :
         dataset = pd.DataFrame(input)
-        st.markdown('### Descriptive Statistics')
         
-        # make descriptive statistics table
-        dataset_statics = dataset.describe().to_csv()
+        st.markdown("#### Visualize your dataset")
         
-        # download descriptive statistic csv file
-        st.download_button( "Press to Download",
-                            dataset_statics,
-                            "dataset_statics.csv",
-                            "text/csv",
-                            key='download-csv' )
-        # view descriptive statistics table
-        st.write(dataset.describe())
-        
-        st.markdown('### Histgram and kernel density estimation')
-        dataset_column = select_column(dataset)
-        
-        make_hist(dataset,dataset_column)
-        
-        corr = dataset.corr()
-        plt.figure(figsize=(12,12))
-        sns.heatmap(corr,square = True,vmax=1,vmin=-1,center=0,cmap='cool')
-        st.pyplot()
-        
+        # analysis section 1
+        descriptive, histgram, correlation = st.tabs(['Descriptive Statistics',
+                                                      'Histgram and kernel density estimation', 
+                                                      'Correlation matrix'])
+        with descriptive:
+            # make descriptive statistics table
+            dataset_statics = dataset.describe().to_csv()
+            
+            # view descriptive statistics table
+            st.write(dataset.describe())
+            
+            # download descriptive statistic csv file
+            st.download_button( "Press to Download",
+                                dataset_statics,
+                                "dataset_statics.csv",
+                                "text/csv",
+                                key='download-csv' )
+
+        with correlation:
+            st.markdown('### Correlation matrix')
+            corr = dataset.corr()
+            plt.figure(figsize=(12,12))
+            sns.heatmap(corr,square = True,vmax=1,vmin=-1,center=0,cmap='cool')
+            st.pyplot(plt)
+            
+        with histgram:
+            st.markdown('### Histgram and kernel density estimation')
+            dataset_column = select_column(dataset)
+            
+            make_hist(dataset,dataset_column)
+            
 
 if __name__ == '__main__':
     main()

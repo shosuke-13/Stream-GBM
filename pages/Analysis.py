@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.metrics import accuracy_score
 from modules import model
-from Stream_GBM import ui_analysis
+from main import ui_analysis
 from modules import create_figure,file_uploader
 
 
@@ -124,7 +124,7 @@ def analysis_predict(upload_csv,all_points):
                                     .loc[:,explanatory_variable]
             
             # predict allpoint data and view dataframe(dataset and results)    
-            predicted_allPoints = pd.DataFrame(clf.predict(allPoints_dropped))
+            predicted_allPoints = pd.DataFrame(clf.predict(allPoints_dropped)).rename(columns={0:'Group Predictions'})
             
             col_all, col_classified = st.tabs(['All points dataset (dropped)', 'Classified'])
             
