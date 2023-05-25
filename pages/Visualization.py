@@ -7,6 +7,7 @@ from modules import file_uploader
 
 
 def make_hist(dataset,dataset_column):
+    plt.figure(figsize=(8, 8))
 
     # visualize 1 column data
     if dataset[dataset_column].dtype != object:
@@ -32,19 +33,26 @@ def select_column(dataset):
 
 def main():
     ui_analysis()
+    st.info("You can check data distribution and correlation matrix of your dataset.", icon="ℹ️")
+    st.markdown("---")
+    
+    st.markdown("#### 1. Upload your dataset")
     input = file_uploader.upload()
-    #dataset = pd.read_csv(input)
+
     # check csv file uploaded
     if input is not None :
         dataset = pd.DataFrame(input)
         
-        st.markdown("#### Visualize your dataset")
+        st.markdown("#### 2. Visualize your dataset")
         
         # analysis section 1
         descriptive, histgram, correlation = st.tabs(['Descriptive Statistics',
                                                       'Histgram and kernel density estimation', 
                                                       'Correlation matrix'])
+        
         with descriptive:
+            st.markdown('###### Descriptive Statistics')
+            
             # make descriptive statistics table
             dataset_statics = dataset.describe().to_csv()
             
@@ -59,14 +67,16 @@ def main():
                                 key='download-csv' )
 
         with correlation:
-            st.markdown('### Correlation matrix')
-            corr = dataset.corr()
+            st.markdown('###### Correlation matrix')
+            corr = dataset.corr(numeric_only = True)
+            
             plt.figure(figsize=(12,12))
             sns.heatmap(corr,square = True,vmax=1,vmin=-1,center=0,cmap='cool')
+            
             st.pyplot(plt)
             
         with histgram:
-            st.markdown('### Histgram and kernel density estimation')
+            st.markdown('###### Histgram and kernel density estimation')
             dataset_column = select_column(dataset)
             
             make_hist(dataset,dataset_column)

@@ -7,7 +7,7 @@ import streamlit.components.v1 as stc
 def ui_analysis():        
     #Header
     #st.image('./icon/plants_icon.png',width=500)
-    st.title('LightGBM Classification For CSV Dataset')
+    st.title('LightGBM Classification for CSV Dataset')
     
 
 #display GIF on home

@@ -1,32 +1,29 @@
 import streamlit as st
-import seaborn as sns
 import matplotlib.pyplot as plt
 import lightgbm as lgb
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay
 
 
-#plot confusino matrix
 def conf_mat(y_valid,predicted):
-    plt.figure(figsize=(5, 5))
+    plt.figure(figsize=(8, 8))
+    
+    #plot confusino matrix
     cm_LR = confusion_matrix(y_valid,predicted)
-    sns.heatmap(cm_LR, square=True, cbar=True, annot=True, cmap='Greens')
-    
-    plt.title('Confusion-Matrix')
-    plt.xlabel("Predicted", fontsize=15)
-    plt.ylabel("True Label", fontsize=15)
-    
-    st.pyplot(plt)
-    
-    
-# plot training process
-def metric(clf):
-    lgb.plot_metric(clf,figsize=(5, 5))
+    cm_display = ConfusionMatrixDisplay(cm_LR).plot(cmap=plt.cm.summer)
     
     st.pyplot(plt)
     
 
-# plot feature importances
+def metric(clf):
+    # plot training process
+    lgb.plot_metric(clf,figsize=(7, 7))
+    
+    st.pyplot(plt)
+    
+
 def feature_importances(clf):
-    lgb.plot_importance(clf,figsize=(5, 5))
+    # plot feature importances
+    lgb.plot_importance(clf,figsize=(8, 8))
     
     st.pyplot(plt)
