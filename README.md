@@ -1,6 +1,6 @@
 ![Streamlit version](https://img.shields.io/badge/Streamlit-v1.14.1-orange)
 ![Update](https://img.shields.io/badge/Update-2023/5/25-blue)
-![License](https://img.shields.io/badge/License-naro-green)
+![License](https://img.shields.io/badge/License-MIT-green)
 # Stream-GBM
 
 ####  About Stream GBM & Target Dataset
