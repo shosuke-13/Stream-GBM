@@ -23,17 +23,17 @@ The purpose of this analysis tools is that user can simple ML analysis more easi
 ## __Usage : ML model__
 - #### Model training and predict page
 
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/analysis_page.gif width="650">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/analysis_page.gif width="500">
 
 &nbsp;
 ## __Usage : Visualization__
 - #### Dataset visualization page
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/visualization_page.gif width="650">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/visualization_page.gif width="500">
 
 
 ## __Usage : Create Sample Dataset__
 - #### Create N rows x M columns sample dataset to test this application
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/create_sample_page.gif width="650">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/create_sample_page.gif width="500">
 
 ## __Usage : Dashboard__
 - #### Check and EDA your dataset using PyGwalker
