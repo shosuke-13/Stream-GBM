@@ -6,12 +6,12 @@
 &nbsp;
 
 - [Stream-GBM](#stream-gbm)
-      - [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
+- [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
   - [__1. ML model__](#1-ml-model)
   - [__2. Visualization__](#2-visualization)
   - [__3. Create Sample Dataset__](#3-create-sample-dataset)
   - [__4. Dashboard__](#4-dashboard)
-      - [References](#references)
+- [References](#references)
 
 
 ####  About Stream GBM & Target Dataset
@@ -25,14 +25,14 @@ The purpose of this analysis tools is that user can simple ML analysis more easi
 On this page, you can perform a classification task using a machine learning model.
 You can freely select the features to use for prediction using a select box.
 
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/analysis_page.gif width="500">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/analysis_page.gif width="450">
 
 &nbsp;
 ## __2. Visualization__
 - #### Dataset visualization page
 On this page, you can check the descriptive statistics of the data and examine the correlation.
 
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/visualization_page.gif width="650">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/visualization_page.gif width="450">
 
 
 ## __3. Create Sample Dataset__
@@ -40,7 +40,7 @@ On this page, you can check the descriptive statistics of the data and examine t
 You can create a sample dataset and test the functionality.
 By moving the slider, you can freely create and output a dataset with 1 to 1000 rows and 1 to 10 columns.
 
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/create_sample_page.gif width="650">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/create_sample_page.gif width="450">
 
 
 ## __4. Dashboard__
