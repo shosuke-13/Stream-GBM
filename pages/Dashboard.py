@@ -5,7 +5,6 @@ from main import ui_analysis
  
 st.set_page_config(layout="wide", page_icon="🧊")
 
-
 def default_dashboard():
     sample = pd.read_csv('sample/sample_dataset.csv')
     
@@ -20,8 +19,9 @@ def main():
     st.markdown("## - EDA using PyGwalker -")
     st.info("Visualization your dataset using PyGwalker", icon="ℹ️")
     st.markdown("---")
-    
     st.write(':sunglasses: Default dataset is sample. Please upload your dataset')
+
+    # upload original dataset
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
@@ -35,7 +35,6 @@ def main():
     
     st.markdown("---")
     st.markdown('[PyGwalker : README](https://github.com/Kanaries/pygwalker)')
-
     
 
 if __name__ == '__main__':
