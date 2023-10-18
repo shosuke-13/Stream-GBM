@@ -38,3 +38,9 @@ The purpose of this analysis tools is that user can simple ML analysis more easi
 ## __Usage : Dashboard__
 - #### Check and EDA your dataset using PyGwalker
 <img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/dashboard_page.gif width="650">
+
+&nbsp;
+***
+#### References
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [PyGWalker](https://github.com/Kanaries/pygwalker)
