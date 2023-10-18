@@ -21,7 +21,7 @@ This tool uses Light GBM model, and output classification accuracy and confusion
 The purpose of this analysis tools is that user can simple ML analysis more easier.Please input two csv dataset (model training dataset and classification dataset). Model training dataset needs explanatory variables and a objective variable. Classification dataset needs only explanatory variable. You can input category variables in these dataset, but please select category variables.<br>
 
 &nbsp;
-#### Cutom Theme
+#### Custom Theme
 ```toml
 [theme]
 base="dark"
