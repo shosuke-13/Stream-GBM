@@ -25,6 +25,8 @@ def display_GIF():
     
 def main():
     ui_analysis()
+    st.info("ML web-application using streamlit!", icon="ℹ️")
+    st.markdown("---")
     display_GIF()
     
     st.markdown('---')

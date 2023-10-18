@@ -5,6 +5,7 @@ from modules import model
 from main import ui_analysis
 from modules import create_figure,file_uploader
 
+st.set_page_config(layout="centered", page_icon=":computer:")
 
 def upload():
     dataset = st.file_uploader("choose a csv file",label_visibility="hidden")

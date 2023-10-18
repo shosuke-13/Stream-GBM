@@ -6,6 +6,9 @@ from main import ui_analysis
 from modules import file_uploader
 
 
+st.set_page_config(layout="centered", page_icon=":bird:")
+
+
 def make_hist(dataset,dataset_column):
     plt.figure(figsize=(8, 8))
 

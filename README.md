@@ -2,6 +2,7 @@
 ![Update](https://img.shields.io/badge/Update-2023/5/25-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 # Stream-GBM
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/images/title_image.png width="650">
 
 ####  About Stream GBM & Target Dataset
 Stream-GBM is a ML classification tool. 
