@@ -8,7 +8,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 def conf_mat(y_valid,predicted):
     plt.figure(figsize=(8, 8))
     
-    #plot confusino matrix
+    # plot confusion matrix
     cm_LR = confusion_matrix(y_valid,predicted)
     cm_display = ConfusionMatrixDisplay(cm_LR).plot(cmap=plt.cm.summer)
     
