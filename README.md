@@ -6,13 +6,13 @@
 &nbsp;
 
 - [Stream-GBM](#stream-gbm)
-      - [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
-      - [Cutom Theme](#cutom-theme)
+- [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
+- [Cutom Theme](#cutom-theme)
   - [__1. ML model__](#1-ml-model)
   - [__2. Visualization__](#2-visualization)
   - [__3. Create Sample Dataset__](#3-create-sample-dataset)
   - [__4. Dashboard__](#4-dashboard)
-      - [References](#references)
+- [References](#references)
 
 
 ####  About Stream GBM & Target Dataset
