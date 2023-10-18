@@ -24,11 +24,12 @@ The purpose of this analysis tools is that user can simple ML analysis more easi
 - #### Model training and predict page
 On this page, you can perform a classification task using a machine learning model. You can freely select the features to use for prediction using a select box.
 
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/analysis_page.gif width="650">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/analysis_page.gif width="500">
 
 &nbsp;
 ## __2. Visualization__
 - #### Dataset visualization page
+<<<<<<< HEAD
 On this page, you can check the descriptive statistics of the data and examine the correlation.
 
 <img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/visualization_page.gif width="650">
@@ -36,12 +37,15 @@ On this page, you can check the descriptive statistics of the data and examine t
 
 ## __3. Create Sample Dataset__
 - #### Create N rows x M columns sample dataset to test this application
+<<<<<<< HEAD
 You can create a sample dataset and test the functionality. By moving the slider, you can freely create and output a dataset with 1 to 1000 rows and 1 to 10 columns.
 
 <img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/create_sample_page.gif width="650">
 
+
 ## __4. Dashboard__
 - #### Check and EDA your dataset using PyGwalker
+<<<<<<< HEAD
 You can create scatter plots, bar charts, and line graphs using PyGWalker.You can efficiently perform exploratory data analysis (EDA) on this page.
 
 <img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/dashboard_page.gif width="650">
