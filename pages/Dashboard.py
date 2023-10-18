@@ -7,12 +7,12 @@ st.set_page_config(layout="wide", page_icon="🧊")
 
 
 def default_dashboard():
-    df = pd.read_csv('sample/sample_dataset.csv')
+    sample = pd.read_csv('sample/sample_dataset.csv')
     
     # Graphic Walker
-    if df is not None:
-        output = pyg.walk(df, env='Streamlit')
-        st.write(output)
+    if sample is not None:
+        sample_output = pyg.walk(sample, env='Streamlit')
+        st.write(sample_output)
 
  
 def main():
@@ -22,17 +22,14 @@ def main():
     st.markdown("---")
     
     st.write(':sunglasses: Default dataset is sample. Please upload your dataset')
-    if st.button("Create Dummy Dataset"):
-        df = None
-        input = st.file_uploader("Choose a CSV file")
-        if input is not None:
-            df = pd.read_csv(input)
+    uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
                 
-
-        # Graphic Walker
-        if df is not None:
-            output = pyg.walk(df, env='Streamlit')
-            st.write(output)
+        output = pyg.walk(df, env='Streamlit')
+        st.write(output)
+        
+        if st.button('Show default dataset'): default_dashboard()
             
     else : default_dashboard()
     

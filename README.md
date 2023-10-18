@@ -4,6 +4,15 @@
 # Stream-GBM
 <img src=https://github.com/shosuke-13/Stream-GBM/blob/main/images/title_image.png width="650">
 
+
+- [Stream-GBM](#stream-gbm)
+      - [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
+  - [__Usage : ML model__](#usage--ml-model)
+  - [__Usage : Visualization__](#usage--visualization)
+  - [__Usage : Create Sample Dataset__](#usage--create-sample-dataset)
+  - [__Usage : Dashboard__](#usage--dashboard)
+
+
 ####  About Stream GBM & Target Dataset
 Stream-GBM is a ML classification tool. 
 This tool uses Light GBM model, and output classification accuracy and confusion matrix.
@@ -17,3 +26,12 @@ The purpose of this analysis tools is that user can simple ML analysis more easi
 ## __Usage : Visualization__
 - #### Dataset visualization page
 <img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/visualization_page.gif width="650">
+
+
+## __Usage : Create Sample Dataset__
+- #### Create N rows x M columns sample dataset to test this application
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/create_sample_page.gif width="650">
+
+## __Usage : Dashboard__
+- #### Check and EDA your dataset using PyGwalker
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/demo/dashboard_page.gif width="650">

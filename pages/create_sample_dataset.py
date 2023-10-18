@@ -9,7 +9,7 @@ st.set_page_config(layout="centered", page_icon=":shark:")
 
 def main():
     ui_analysis()
-    st.markdown("## - Create Dummy Dataset -")
+    st.markdown("## - Create Sample Dataset -")
     st.info("Select number of rows and columns, you can download sample dataset", icon="ℹ️")
     st.markdown("---")
     
