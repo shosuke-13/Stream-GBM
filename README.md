@@ -6,18 +6,23 @@
 &nbsp;
 
 - [Stream-GBM](#stream-gbm)
-- [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
+      - [About Stream GBM \& Target Dataset](#about-stream-gbm--target-dataset)
+      - [Cutom Theme](#cutom-theme)
   - [__1. ML model__](#1-ml-model)
   - [__2. Visualization__](#2-visualization)
   - [__3. Create Sample Dataset__](#3-create-sample-dataset)
   - [__4. Dashboard__](#4-dashboard)
-- [References](#references)
+      - [References](#references)
 
 
 ####  About Stream GBM & Target Dataset
 Stream-GBM is a ML classification tool. 
 This tool uses Light GBM model, and output classification accuracy and confusion matrix.
 The purpose of this analysis tools is that user can simple ML analysis more easier.Please input two csv dataset (model training dataset and classification dataset). Model training dataset needs explanatory variables and a objective variable. Classification dataset needs only explanatory variable. You can input category variables in these dataset, but please select category variables.<br>
+
+#### Cutom Theme
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/images/custom_theme.png width="1000">
+
 
 &nbsp;
 ## __1. ML model__
