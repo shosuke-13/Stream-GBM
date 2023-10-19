@@ -2,7 +2,7 @@
 ![Update](https://img.shields.io/badge/Update-2023/10/18-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 # Stream-GBM
-<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/images/logo.png width="1000" height="1000">
+<img src=https://github.com/shosuke-13/Stream-GBM/blob/main/images/logo.png width="1000">
 
 &nbsp;
 - [Stream-GBM](#stream-gbm)
